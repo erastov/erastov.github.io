@@ -21,9 +21,9 @@ $(document).ready(function() {
 				$("#nick").html("I AM JUST PAGE.");
 		 	});
 
- 			$("#subname").html("OF THE FULLSTACK DEVELOPER");
+ 			$("#subname").html("DON'T CLICK ON THE CROSS!!!");
 
- 			$(".material-icons").html("airplanemode_active");
+ 			$(".material-icons").html("clear");
  			visibility = false;
  		}
  		else{
@@ -32,7 +32,7 @@ $(document).ready(function() {
  			$("#subname").html("<a href='https://github.com/erastov'>profile</a>");
  			$("#subname").append(" - <a href='https://github.com/erastov/erastov.github.io'>repo</a>")
  			$("#subname").append(" - <a href='https://github.com/sofiazakharova/SofiaZakharova.github.io/wiki'>wiki</a>")
- 			$(".material-icons").html("airplanemode_inactive");
+ 			$(".material-icons").html("brightness_1");
  			visibility = true;
  		}
  	})
