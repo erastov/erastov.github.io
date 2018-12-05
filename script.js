@@ -30,8 +30,8 @@ $(document).ready(function() {
  			temp = $("#name").html();
  			$("#name").html("<a href='https://t.me/defaultdefault' style='text-decoration: none'>@defauldefault</a>");
  			$("#subname").html("<a href='https://github.com/erastov'>profile</a>");
- 			$("#subname").append(" - <a href='https://github.com/erastov/erastov.github.io'>repo</a>")
- 			$("#subname").append(" - <a href='https://github.com/sofiazakharova/SofiaZakharova.github.io/wiki'>wiki</a>")
+ 			$("#subname").append(" - <a href='https://github.com/erastov/erastov.github.io'>own repository</a>")
+ 			$("#subname").append(" - <a href=''>wiki</a>")
  			$(".material-icons").html("brightness_1");
  			visibility = true;
  		}
