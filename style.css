@@ -16,6 +16,9 @@
 	padding-left: 10px;
 	padding-right: 10px;
 }
+.content {
+	margin-left: 120px;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

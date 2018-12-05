@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="script.js"></script>
+
+    <title>NJP ;)</title>
+</head>
+<body>
+
+<div id="background">
+    <div class="menu">
+        <span><a class="tab" href='lab1.html'>lab#1</a></span>
+        <span><a class="tab" href='lab2.html'>lab#2</a></span>
+        <span><a class="tab" href='index.html'>home</a></span>
+    </div>
+    <div id="window">
+        <div class="content">
+            <p style="margin-left: 20px;"><b>Цель работы:</b>  настройка локальной сети передачи данных</p>
+            <ul style="margin-left: -100px;" class="actions">
+                Настройка коммутаторов и маршрутизаторов.<br>
+                Расчет диапазонов подсетей.
+
+                <table>
+                    <tr>
+                        <th>-</th>
+                        <th>Lan A</th>
+                        <th>Lan B</th>
+                        <th>Lan C</th>
+                    </tr>
+                    <tr>
+                        <th>Кол-во узлов&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>35</th>
+                        <th>120</th>
+                        <th>512</th>
+                    </tr>
+                    <tr>
+                        <th>Subnet</th>
+                        <th>192.168.5.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>172.16.5.0</th>
+                        <th>10.10.5.0</th>
+                    </tr>
+                    <tr>
+                        <th>Mask</th>
+                        <th>255.255.255.192 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>255.255.255.128 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>255.255.252.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>Broadcast</th>
+                        <th>192.168.5.63 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>172.16.5.127</th>
+                        <th>10.10.8.255</th>
+                    </tr>
+                </table>
+                <br>
+                ШАГ 1: Разместить на рабочем поле коммутатор и два компьютера и соединить их<br>
+                <br>
+                <p>
+                    <img class="center-img" src="img/scr1.jpg" width="240" height="100">
+                </p>
+                <br>
+                ШАГ 2: Добавить на рабочее поле еще один коммутатор с двумя компьютерами и настроить адресацию из другой
+                подсети<br>
+                <br>
+                <p>
+                    <img class="center-img" src="img/scr2.jpg" width="250" height="150">
+                </p>
+                <br>
+                ШАГ 3: Соединить коммутаторы между собой и проверить работоспособность сети (Не работает, так как
+                коммутаторы подсоединяются только к маршрутизаторам)<br>
+                <br>
+                <p>
+                    <img class="center-img" src="img/scr0.jpg" width="250" height="220">
+                </p>
+                <br>
+                ШАГ 4: Добавить маршрутизатор на рабочее поле<br>
+                <br>
+                <p>
+                    <img class="center-img" src="img/scr3.jpg" width="250" height="220">
+                </p>
+                <br>
+                ШАГ 5: Добавить на рабочее поле еще один маршрутизатор. Подключить к нему коммутатор и компьютер<br>
+                <br>
+                <p>
+                    <img class="center-img" src="img/scr4.jpg" width="300" height="270">
+                </p>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Устройство&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>IP - адрес</th>
+                        <th>Маска</th>
+                        <th>Шлюз</th>
+                    </tr>
+                    <tr>
+                        <th>PC0</th>
+                        <th>192.168.5.62 &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>255.255.255.192 &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>192.168.5.1</th>
+                    </tr>
+                    <tr>
+                        <th>PC1</th>
+                        <th>192.168.5.61</th>
+                        <th>255.255.255.192</th>
+                        <th>192.168.5.1</th>
+                    </tr>
+                    <tr>
+                        <th>PC2</th>
+                        <th>172.16.5.126</th>
+                        <th>255.255.255.128</th>
+                        <th>172.16.5.1</th>
+                    </tr>
+                    <tr>
+                        <th>PC3</th>
+                        <th>172.16.5.125</th>
+                        <th>255.255.255.128</th>
+                        <th>172.16.5.1</th>
+                    </tr>
+                    <tr>
+                        <th>PC4</th>
+                        <th>10.10.8.254</th>
+                        <th>255.255.252.0</th>
+                        <th>10.10.5.1</th>
+                    </tr>
+                    <tr>
+                        <th>R0 0/0</th>
+                        <th>192.168.5.1</th>
+                        <th>255.255.255.192</th>
+                        <th>-</th>
+                    </tr>
+                    <tr>
+                        <th>R0 0/1</th>
+                        <th>172.16.5.1</th>
+                        <th>255.255.255.128</th>
+                        <th>-</th>
+                    </tr>
+                    <tr>
+                        <th>R0 0/2</th>
+                        <th>15.15.5.2</th>
+                        <th>255.255.255.252</th>
+                        <th>-</th>
+                    </tr>
+                    <tr>
+                        <th>R1 0/1</th>
+                        <th>10.10.5.1</th>
+                        <th>255.255.252.0</th>
+                        <th>-</th>
+                    </tr>
+                    <tr>
+                        <th>R1 0/2</th>
+                        <th>15.15.5.1</th>
+                        <th>255.255.255.252</th>
+                        <th>-</th>
+                    </tr>
+                </table>
+                <br>
+                <h3>Проверка работоспособности сети:</h3>
+                <br>
+                <p>
+                    <img class="center-img" src="img/successful.jpg" width="500" height="100">
+                </p>
+                <br>Пакеты успешно отправляются!
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
